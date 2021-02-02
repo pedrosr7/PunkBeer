@@ -53,6 +53,8 @@ class BeersFragment : BaseFragment() {
         textFile_search.afterTextChanged {
             if(it.isNotBlank()){
                 beersViewModel.getBeers(it)
+            } else {
+                beersViewModel.getBeers(null)
             }
         }
 
